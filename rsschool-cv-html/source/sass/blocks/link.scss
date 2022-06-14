@@ -1,0 +1,39 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  color: $color-default-black;
+  transition: all $trans-default;
+  outline: none;
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 10px;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: $color-transparent;
+    transition: all $trans-default;
+  }
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+    color: $color-default-white;
+    &::after {
+      background-color: $color-default-white;
+      width: calc(100% - 10px);
+    }
+  }
+  // &--bg {
+  //   background-color: $color-default-white;
+  //   border-radius: 7px;
+  //   &:hover,
+  //   &:focus-visible {
+  //     background-color: $color-default-black;
+  //     color: $color-default-white;
+  //   }
+  // }
+}

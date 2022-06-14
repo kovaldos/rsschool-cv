@@ -2,16 +2,32 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#contacts",
+        text: "Contacts"
       },
       {
-        href: "#",
-        text: "Страница 2"
+        href: "#summary",
+        text: "Summary"
       },
       {
-        href: "#",
-        text: "Страница 3"
+        href: "#skils",
+        text: "Skills"
+      },
+      {
+        href: "#projects",
+        text: "My projects"
+      },
+      {
+        href: "#experience",
+        text: "Experience"
+      },
+      {
+        href: "#education",
+        text: "Education"
+      },
+      {
+        href: "#english",
+        text: "English"
       },
     ]
 
@@ -19,9 +35,11 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          img(src="./img/svg/logo.svg", alt="RS School logo")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          img(src="./img/svg/logo.svg", alt="RS School logo")
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
@@ -31,6 +49,6 @@ mixin header(headerMods, currentUrl)
               - const activeState = currentUrl === link.href
               li.main-nav__item
                 if(activeState)
-                  span.main-nav__link.is-active=link.text
+                  span.main-nav__link.link.is-active=link.text
                 else
-                  a.main-nav__link(href=link.href)=link.text
+                  a.main-nav__link.link(href=link.href)=link.text

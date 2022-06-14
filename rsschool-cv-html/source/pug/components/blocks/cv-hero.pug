@@ -3,7 +3,7 @@ mixin cv-hero ()
 		const data = {
 			person: "person: { ",
 			title: "name: <strong>'Yaroslav Kovalev'</strong>,",
-			age: "age: 40 }",
+			age: "position: <strong>'Frontend developer'</strong>, }",
 			img: {
 				src: "photo",
 				alt: "My photo",
@@ -29,10 +29,10 @@ mixin cv-hero ()
 					src: "hero-img-05",
 					alt: "some code on the screen"
 				},
-				//- {
-				//- 	src: "hero-img-06",
-				//- 	alt: "some code on the screen"
-				//- },
+				{
+					src: "hero-img-06",
+					alt: "some code on the screen"
+				},
 			]
 		}
 
@@ -51,4 +51,4 @@ mixin cv-hero ()
 					h1.cv-hero__title.title.title--h1
 						span.cv-hero__title-span.cv-hero__title-span--01=data.person
 						span.cv-hero__title-span.cv-hero__title-span--02!=data.title
-						span.cv-hero__title-span.cv-hero__title-span--03=data.age
+						span.cv-hero__title-span.cv-hero__title-span--03!=data.age

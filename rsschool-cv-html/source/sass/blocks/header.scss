@@ -1,13 +1,18 @@
 .header {
-  padding: 28px 0;
-
+  padding: 20px 0;
   background-color: $color-neon-blue;
 
   .container {
     display: flex;
+    align-items: center;
   }
 
   &__logo {
     color: $color-default-white;
+    width: 150px;
+    height: 100%;
+    background-color: $color-default-white;
+    border-radius: 10px;
+    padding: 5px;
   }
 }
