@@ -1,0 +1,14 @@
+.text {
+	margin: 0;
+	padding: 0;
+	transition: color $trans-default;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	&--sm {
+		// sm = small
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
