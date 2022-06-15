@@ -1,3 +1,20 @@
 mixin footer(footerMods)
+  -
+    const data = {
+      year: 2022,
+      link: {
+        href: "https://github.com/kovaldos",
+        target: "_blank",
+        rel: "noopener noreferrer nofollow",
+        text: "by Yaroslav Kovalev",
+      }
+    }
+
   footer.footer(class=footerMods)
-    .container
+    .container.footer__container
+      a.footer__logo(href="https://rs.school/js/" target="_blank" rel="noopener noreferrer nofollow")
+        img(src="./img/svg/logo-js.svg", alt="RS School JS logo")
+      .footer__copy 
+        span &copy;&nbsp;
+        span=data.year
+      a.footer__link.link(href=data.link.href target=data.link.target rel=data.link.rel)=data.link.text 

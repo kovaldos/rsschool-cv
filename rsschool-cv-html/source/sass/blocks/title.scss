@@ -4,24 +4,20 @@
 	color: $color-default-white;
 	transition: color $trans-default;
 	text-transform: uppercase;
+	line-height: 1.5;
 	&--h1 {
-		font-size: 48px;
-		line-height: 1.5;
+		font-size: 2.7rem;
 	}
 	&--h2 {
 		font-weight: 700;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 2rem;
 	}
 	&--h3 {
 		font-weight: 700;
-		font-size: 16px;
-		line-height: 19px;
-
+		font-size: 1.5rem;
 	}
 	&--h4 {
 		font-weight: 700;
-		font-size: 14px;
-		line-height: 17px;
+		font-size: 1.2rem;
 	}
 }

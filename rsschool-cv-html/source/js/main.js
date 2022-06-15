@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import {initHeroSlider} from './modules/hero-slider';
+import {initScrollToAnchor} from './modules/scroll-to-anchor';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initFormValidate();
     initHeroSlider();
+    initScrollToAnchor();
   });
 });
 

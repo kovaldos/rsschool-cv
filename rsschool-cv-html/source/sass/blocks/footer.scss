@@ -1,5 +1,23 @@
 .footer {
   padding: 40px 0;
-
   background-color: $color-neon-blue;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+  }
+  &__copy {
+    font-size: 1.5rem;
+  }
+  &__link {
+    font-size: 1.2rem;
+  }
 }

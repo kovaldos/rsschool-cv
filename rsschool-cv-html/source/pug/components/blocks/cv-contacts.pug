@@ -1,0 +1,17 @@
+mixin cv-contacts ()
+	-
+		const data = {
+			title: "Contact me",
+			email: "orblack2@gmail.com",
+			tel: "+7(904)612-15-80",
+			tg: "@kovaldos",
+			dscrd: "@kovaldos",
+			linkedIn: "https://www.linkedin.com/in/%D1%8F%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D0%BA%D0%BE%D0%B2%D0%B0%D0%BB%D0%B5%D0%B2-101b42165",
+		}
+
+	section.cv-contacts#contacts 
+		.container.cv-contacts__container 
+			h2.cv-contacts__title.title.title--h2=data.title
+			.cv-contacts__wrapper 
+				a.cv-contacts__link.link(href="mailto:orblack2@gmail.com")=data.email
+				a.cv-contacts__link.link(href="tel:+79046121580")=data.tel

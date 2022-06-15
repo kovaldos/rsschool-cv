@@ -15,23 +15,27 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
+  line-height: 1.5rem;
   font-family: $ff-placeholder;
   color: $color-default-black;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+  @include vp-1279 {
+    font-size: 15px;
+  }
+  @include vp-1023 {
+    font-size: 14px;
+  }
 }
 
 body {
   width: 100%;
   height: 100%;
-
-  background-color: $color-default-white;
+  background-color: $color-tolopea;
 }
 
 a {

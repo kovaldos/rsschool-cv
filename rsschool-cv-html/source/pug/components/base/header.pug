@@ -3,31 +3,38 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#contacts",
-        text: "Contacts"
+        text: "Contacts",
+        anchorLink: "contacts",
       },
       {
         href: "#summary",
-        text: "Summary"
+        text: "Summary",
+        anchorLink: "summary",
       },
       {
-        href: "#skils",
-        text: "Skills"
+        href: "#skills",
+        text: "Skills",
+        anchorLink: "skills",
       },
       {
         href: "#projects",
-        text: "My projects"
+        text: "My projects",
+        anchorLink: "projects",
       },
       {
         href: "#experience",
-        text: "Experience"
+        text: "Experience",
+        anchorLink: "experience",
       },
       {
         href: "#education",
-        text: "Education"
+        text: "Education",
+        anchorLink: "education",
       },
       {
         href: "#english",
-        text: "English"
+        text: "English",
+        anchorLink: "english",
       },
     ]
 
@@ -36,12 +43,12 @@ mixin header(headerMods, currentUrl)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
-          img(src="./img/svg/logo.svg", alt="RS School logo")
+          img(src="./img/svg/logo.svg" alt="RS School logo")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
-          img(src="./img/svg/logo.svg", alt="RS School logo")
+        a.header__logo(href="index.html" aria-label="Переход на главную")
+          img(src="./img/svg/logo.svg" alt="RS School logo")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        button.main-nav__toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
           ul.main-nav__list
@@ -51,4 +58,4 @@ mixin header(headerMods, currentUrl)
                 if(activeState)
                   span.main-nav__link.link.is-active=link.text
                 else
-                  a.main-nav__link.link(href=link.href)=link.text
+                  a.main-nav__link.link(href=link.href data-target=link.anchorLink)=link.text
