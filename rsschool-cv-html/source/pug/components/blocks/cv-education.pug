@@ -1,0 +1,12 @@
+mixin cv-education ()
+	-
+		const data = {
+			title: "education",
+			text: "JavaScript (ES5, ES6), jQuery, Bootstrap, React.js(basic), Vue.js(basic), PUG, SASS/SCSS, HTML5, CSS3",
+		}
+
+	section.cv-education#education 
+		.container.cv-education__container 
+			h2.cv-education__title.title.title--h2=data.title
+			.cv-education__wrapper.main__wrapper 
+				p.cv-education__text.text=data.text

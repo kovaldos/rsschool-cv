@@ -1,12 +1,98 @@
 .cv-contacts {
 	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+		align-items: center;
+		justify-items: center;
+	}
+	&__link {
+		width: 100px;
+		height: 100px;
+		&:hover,
+		&:focus-visible {
+			&::after {
+				display: none;
+			}
+			.cv-contacts {
+				&__icon {
+					&--gmail {
+						.st--0 {
+							color: $color-royal-blue;
+						}
+						.st--1 {
+							color: $color-chateau-green;
+						}
+						.st--2 {
+							color: $color-selective-yellow;
+						}
+						.st--3 {
+							color: $color-cinnabar;
+						}
+						.st--4 {
+							color: $color-fire-brick;
+						}
+					}
+					&--phone {
+						color: $color-neon-blue;
+					}
+					&--linkedin {
+						color: $color-cerulean;
+					}
+					&--discord {
+						color: $color-neon-blue;
+					}
+					&--tg {
+						color: $color-pacific-blue;
+					}
+					&--fb {
+						color: $color-mariner;
+					}
+					&--vk {
+						color: $color-san-marino;
+					}
+				}
+			}
+		}
+		&--insta {
+			border-radius: 25px;
+			background-color: $color-dim-gray;
+
+			z-index: 0;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 25px;
+				opacity: 0;
+				transition: opacity $trans-default;
+				z-index: -1;
+				background: $mustard-to-fuchsia;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			&:hover,
+			&:focus-visible {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__icon {
 		width: 100%;
-		height: 300px;
-		background-color: $color-default-white;
-		outline: 2px solid $color-neon-blue;
-		outline-offset: 5px;
-		border-radius: 20px;
-		padding: 25px;
-		margin: 30px 0;
+		height: 100%;
+		color: $color-dim-gray;
+		transition: color $trans-default;
+		.st {
+			transition: color $trans-default;
+		}
+		&--insta {
+			color: $color-default-white;
+		}
 	}
 }

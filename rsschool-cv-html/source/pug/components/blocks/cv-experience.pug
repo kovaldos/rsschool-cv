@@ -1,0 +1,12 @@
+mixin cv-experience ()
+	-
+		const data = {
+			title: "experience",
+			text: "JavaScript (ES5, ES6), jQuery, Bootstrap, React.js(basic), Vue.js(basic), PUG, SASS/SCSS, HTML5, CSS3",
+		}
+
+	section.cv-experience#experience 
+		.container.cv-experience__container 
+			h2.cv-experience__title.title.title--h2=data.title
+			.cv-experience__wrapper.main__wrapper 
+				p.cv-experience__text.text=data.text

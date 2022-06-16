@@ -6,7 +6,7 @@
   font-size: 1rem;
   line-height: 1.5;
   color: $color-default-black;
-  transition: all $trans-default;
+  transition: color $trans-default;
   outline: none;
   position: relative;
   padding: 5px;
@@ -14,7 +14,8 @@
     position: absolute;
     bottom: 8px;
     content: "";
-    width: 0;
+    width: calc(100% - 2 * 5px);
+    max-width: 0;
     height: 1px;
     background-color: $color-transparent;
     transition: all $trans-default;
@@ -25,7 +26,7 @@
     color: $color-default-white;
     &::after {
       background-color: $color-default-white;
-      width: calc(100% - 2 * 5px);
+      max-width: 100%;
     }
   }
   // &--bg {

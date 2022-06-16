@@ -2,9 +2,10 @@
   padding: 20px 0;
   background-color: $color-neon-blue;
 
-  .container {
+  &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {

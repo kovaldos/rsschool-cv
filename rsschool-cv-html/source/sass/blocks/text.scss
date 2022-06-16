@@ -2,13 +2,17 @@
 	margin: 0;
 	padding: 0;
 	transition: color $trans-default;
-	font-weight: inherit;
-	font-size: inherit;
-	line-height: inherit;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
 	&--sm {
 		// sm = small
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
+		font-size: 0.9rem;
+		line-height: 1.3;
+	}
+	&--lg {
+		// lg = large
+		font-weight: 500;
+		font-size: 1.5rem;
 	}
 }

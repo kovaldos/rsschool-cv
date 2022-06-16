@@ -1,0 +1,12 @@
+mixin cv-projects ()
+	-
+		const data = {
+			title: "projects",
+			text: "JavaScript (ES5, ES6), jQuery, Bootstrap, React.js(basic), Vue.js(basic), PUG, SASS/SCSS, HTML5, CSS3",
+		}
+
+	section.cv-projects#projects 
+		.container.cv-projects__container 
+			h2.cv-projects__title.title.title--h2=data.title
+			.cv-projects__wrapper.main__wrapper 
+				p.cv-projects__text.text=data.text

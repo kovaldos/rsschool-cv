@@ -2,11 +2,11 @@ mixin cv-summary ()
 	-
 		const data = {
 			title: "About me",
-			text: "I am 40. I live in St. Petersburg. Started learning programming in October 2020. Working as a frontend developer since May 2021. I plan to study react.js professionally. Prior to learning web development, I worked for 12 years as an executive in the retail industry. Of these, most of them are in the trade of household appliances and electronics, computer equipment. I love technology and everything connected with it. I believe in progress.",
+			text: "I am 40. I live in St. Petersburg. I started learning programming in October 2020. I working as a frontend developer since May 2021. I plan to study react.js professionally. Prior to learning web development, I worked for over 10 years as an executive in the retail industry. Of these, most of them are in the trade of household appliances and electronics, computer equipment. I love technology and everything connected with it. I believe in progress.",
 		}
 
 	section.cv-summary#summary 
 		.container.cv-summary__container 
 			h2.cv-summary__title.title.title--h2=data.title
-			.cv-summary__wrapper 
-				p.cv-summary__text.text=data.text
+			.cv-summary__wrapper.main__wrapper 
+				p.cv-summary__text.text.text--lg=data.text

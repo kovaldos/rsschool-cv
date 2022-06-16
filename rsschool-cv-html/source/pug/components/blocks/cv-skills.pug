@@ -1,0 +1,12 @@
+mixin cv-skills ()
+	-
+		const data = {
+			title: "Skills",
+			text: "JavaScript (ES5, ES6), jQuery, Bootstrap, React.js(basic), Vue.js(basic), PUG, SASS/SCSS, HTML5, CSS3",
+		}
+
+	section.cv-skills#skills 
+		.container.cv-skills__container 
+			h2.cv-skills__title.title.title--h2=data.title
+			.cv-skills__wrapper.main__wrapper 
+				p.cv-skills__text.text=data.text
