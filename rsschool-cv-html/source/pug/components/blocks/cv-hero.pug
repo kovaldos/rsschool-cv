@@ -1,0 +1,55 @@
+mixin cv-hero ()
+	-
+		const data = {
+			person: "person: { ",
+			title: "name: <strong>'Yaroslav Kovalev'</strong>,",
+			age: "position: <strong>'Frontend developer'</strong>,",
+			img: {
+				src: "photo",
+				alt: "My photo",
+			},
+			slides: [
+				{
+					src: "hero-img-01",
+					alt: "phone screen with words 'eat sleep code repeat'"
+				},
+				{
+					src: "hero-img-02",
+					alt: "some code on the screen"
+				},
+				{
+					src: "hero-img-03",
+					alt: "half open laptop on the table"
+				},
+				{
+					src: "hero-img-04",
+					alt: "some blur code on two screens"
+				},
+				{
+					src: "hero-img-05",
+					alt: "some code on the screen"
+				},
+				//- {
+				//- 	src: "hero-img-06",
+				//- 	alt: "some code on the screen"
+				//- },
+			]
+		}
+
+	section.cv-hero 
+		.cv-hero__slider.swiper.swiper--01
+			.swiper-wrapper
+				each item in data.slides
+					.swiper-slide 
+						.cv-hero__slider-item
+							+picture("slides", item.src, "jpg", item.alt)
+		.container.cv-hero__container
+			.cv-hero__wrapper
+				.cv-hero__pic
+					+picture("content", data.img.src, "jpg", 300, 300, data.img.alt)
+				.cv-hero__heading
+					h1.cv-hero__title.title.title--h1
+						span.cv-hero__title-span.cv-hero__title-span--01=data.person
+						span.cv-hero__title-span.cv-hero__title-span--02!=data.title
+						span.cv-hero__title-span.cv-hero__title-span--03!=data.age
+						span.cv-hero__title-span.cv-hero__title-span--04 }

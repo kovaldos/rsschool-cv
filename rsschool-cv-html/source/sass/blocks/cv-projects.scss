@@ -1,0 +1,31 @@
+.cv-projects {
+	&__wrapper {
+		gap: 2rem;
+		&-col {
+			background-color: $color-alice-blue;
+			padding: 1rem;
+			border-radius: 10px;
+			&--01 {
+				margin: 0 auto 0 0;
+			}
+			// &--02 {
+			// 	// flex: 1;
+			// }
+		}
+	}
+	&__subtitle {
+		color: $color-default-black;
+		margin: 0 0 1rem;
+	}
+	&__list {
+		margin: 0;
+	}
+	&__link {
+		font-size: 1.3rem;
+	}
+	&__pre {
+		background-color: $color-default-black;
+		color: $color-default-white;
+		padding: 1rem;
+	}
+}

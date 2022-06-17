@@ -1,0 +1,42 @@
+mixin cv-experience ()
+	-
+		const data = {
+			title: "experience",
+			items: [
+				{
+					text1: "May 2021 to Present. RA-Studio, ",
+					href: "https://ra-studio.ru/ ",
+					linkText: "ra-studio.ru ",
+					pos: "Frontend developer",
+				},
+				{
+					text1: "April 2020 — October 2020. Vimos, trading house, ",
+					href: "https://vimos.ru/ ",
+					linkText: "vimos.ru ",
+					pos: "Deputy store manager",
+				},
+				{
+					text1: "September 2019 — April 2020. Satellite TV MTS St. Petersburg, ",
+					href: "https://sputnik.mts.ru/ ",
+					linkText: "sputnik.mts.ru ",
+					pos: "Supervisor of sales representatives",
+				},
+				{
+					text1: "August 2011 — April 2019 Korona shopping center, Vitebsk branch of Tabak-invest LLC Vitebsk, ",
+					href: "https://korona.by/ ",
+					linkText: "korona.by ",
+					pos: "Head of department (head of household appliances and electronics supermarkets)",
+				},
+			],
+		}
+
+	section.cv-experience#experience 
+		.container.cv-experience__container 
+			h2.cv-experience__title.title.title--h2=data.title
+			.cv-experience__wrapper.main__wrapper 
+				ul.cv-experience__list
+					each item in data.items
+						li.cv-experience__list-item
+							span=item.text1
+							a.cv-experience__link.link(href=item.href, target="_blank", rel="noopener noreferrer")=item.linkText
+							span=item.pos 

@@ -1,0 +1,16 @@
+mixin cv-education ()
+	-
+		const data = {
+			title: "education",
+			text: "2005, Russian University of Innovations, state and municipal management",
+			subtitle: "self-education",
+			text2: "Youtube channels HTML-Academy, Glo-Academy. Web-tutorials from <a class='cv-education__link cv-education__link--ljs' href='https://learn.javascript.ru/' target='_blank' rel='nofollow noreferrer'>learn.javascript.ru</a> and <a class='cv-education__link cv-education__link--mdn' href='https://developer.mozilla.org/en-US/' target='_blank' rel='nofollow noreferrer'>MDN</a>",
+		}
+
+	section.cv-education#education 
+		.container.cv-education__container 
+			h2.cv-education__title.title.title--h2=data.title
+			.cv-education__wrapper.main__wrapper 
+				p.cv-education__text.text.text--md=data.text
+				h3.cv-education__subtitle.title.title--h3=data.subtitle
+				p.cv-education__text.text.text--md!=data.text2
