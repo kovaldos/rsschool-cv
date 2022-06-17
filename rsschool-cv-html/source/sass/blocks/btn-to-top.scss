@@ -1,0 +1,33 @@
+.btn {
+	&-to-top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $color-transparent;
+		border: 0;
+		outline: none;
+		position: fixed;
+		top: auto;
+		left: auto;
+		right: 5vh;
+		bottom: 3vh;
+		transition: all $trans-default;
+		transform: translateX(250%);
+		border-radius: 100%;
+		text-transform: uppercase;
+		outline: auto;
+		padding: 1rem;
+		width: 50px;
+		height: 50px;
+		&--is-shown {
+			transform: translateX(0);
+		}
+		&:hover,
+		&:focus-visible {
+			outline-color: $color-neon-blue;
+		}
+		&-icon {
+			color: $color-default-white
+		}
+	}
+}

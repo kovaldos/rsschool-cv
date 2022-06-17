@@ -17,4 +17,5 @@ mixin footer(footerMods)
       .footer__copy 
         span &copy;&nbsp;
         span=data.year
-      a.footer__link.link(href=data.link.href target=data.link.target rel=data.link.rel)=data.link.text 
+      a.footer__link.link(href=data.link.href target=data.link.target rel=data.link.rel)=data.link.text
+  +btn-to-top()

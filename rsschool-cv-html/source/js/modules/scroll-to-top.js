@@ -1,17 +1,17 @@
 // Button to top of the viewport - Start -
 import {scrollTo} from '../utils/scroll-to';
 const initBtnToTop = () => {
-  const btnToTop = document.querySelector('.btn__to-top');
+  const btnToTop = document.querySelector('.btn-to-top');
   if (btnToTop) {
     const scrollHeight = 1500;
     window.addEventListener('scroll', function () {
       // Если прокрутили дальше scrollHeight пикселей от верха вьюпорта, показываем кнопку
       // eslint-disable-next-line no-invalid-this
       if (this.scrollY > scrollHeight) {
-        btnToTop.classList.add('btn__to-top--is-shown');
+        btnToTop.classList.add('btn-to-top--is-shown');
         // Иначе прячем
       } else {
-        btnToTop.classList.remove('btn__to-top--is-shown');
+        btnToTop.classList.remove('btn-to-top--is-shown');
       }
     });
     // При клике прокручиваем на самый верх

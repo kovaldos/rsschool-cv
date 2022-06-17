@@ -4,6 +4,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 // import {initFormValidate} from './modules/form/init-form-validate';
 import {initHeroSlider} from './modules/hero-slider';
 import {initScrollToAnchor} from './modules/scroll-to-anchor';
+import {initBtnToTop} from './modules/scroll-to-top';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // initFormValidate();
     initHeroSlider();
     initScrollToAnchor();
+    initBtnToTop();
   });
 });
 
