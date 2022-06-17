@@ -2403,7 +2403,11 @@ button,
   text-indent: 50px;
 }
 
-.cv-contacts__wrapper {
+.cv-contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -2428,7 +2432,7 @@ button,
 
 .cv-contacts__link:hover .cv-contacts__icon--gmail .st--0,
 .cv-contacts__link:focus-visible .cv-contacts__icon--gmail .st--0 {
-  color: #4285f4;
+  fill: #4285f4;
 }
 
 .cv-contacts__link:hover .cv-contacts__icon--gmail .st--1,

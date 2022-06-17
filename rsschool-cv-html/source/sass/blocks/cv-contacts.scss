@@ -1,5 +1,9 @@
 .cv-contacts {
-	&__wrapper {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 40px;
@@ -19,7 +23,7 @@
 				&__icon {
 					&--gmail {
 						.st--0 {
-							color: $color-royal-blue;
+							fill: $color-royal-blue;
 						}
 						.st--1 {
 							color: $color-chateau-green;
