@@ -1,1 +1,1 @@
-# https://kovaldos.github.io/rsschool-cv/rsschool-cv-html/
+# https://kovaldos.github.io/rsschool-cv/cv
