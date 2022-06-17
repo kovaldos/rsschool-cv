@@ -1661,7 +1661,7 @@ button,
   width: calc(100% - 2 * 5px);
   max-width: 0;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #000000;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1670,12 +1670,10 @@ button,
 .link:hover,
 .link:focus-visible {
   text-decoration: none;
-  color: #ffffff;
 }
 
 .link:hover::after,
 .link:focus-visible::after {
-  background-color: #ffffff;
   max-width: 100%;
 }
 
@@ -2238,6 +2236,10 @@ button,
   white-space: nowrap;
 }
 
+.main-nav__link::after {
+  background-color: #ffffff;
+}
+
 .main-nav__link.is-active {
   opacity: 0.6;
 }
@@ -2473,6 +2475,100 @@ button,
 
 .cv-contacts__icon--insta {
   color: #ffffff;
+}
+
+.cv-skills__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+
+.cv-skills__list > * {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+
+.cv-skills__link {
+  width: 100px;
+  height: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.cv-skills__link::after {
+  display: none;
+}
+
+.cv-skills__link span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.cv-skills__link span::after {
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  content: "";
+  width: 100%;
+  max-width: 0;
+  height: 1px;
+  background-color: #000000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cv-skills__link:hover .cv-skills__icon,
+.cv-skills__link:focus-visible .cv-skills__icon {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cv-skills__link:hover span::after,
+.cv-skills__link:focus-visible span::after {
+  max-width: 100%;
+}
+
+.cv-skills__icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .footer {

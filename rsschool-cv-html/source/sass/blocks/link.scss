@@ -17,15 +17,13 @@
     width: calc(100% - 2 * 5px);
     max-width: 0;
     height: 1px;
-    background-color: $color-transparent;
+    background-color: $color-default-black;
     transition: all $trans-default;
   }
   &:hover,
   &:focus-visible {
     text-decoration: none;
-    color: $color-default-white;
     &::after {
-      background-color: $color-default-white;
       max-width: 100%;
     }
   }
