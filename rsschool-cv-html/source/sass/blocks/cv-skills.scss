@@ -30,6 +30,7 @@
 			align-items: center;
 			position: relative;
 			text-transform: capitalize;
+			line-height: 2rem;
 			&::after {
 				display: block;
 				position: absolute;
@@ -59,7 +60,6 @@
 	&__icon {
 		width: 50px;
 		height: 50px;
-		margin: 0 0 1rem;
 		transition: transform $trans-default;
 		transform: scale(1);
 	}
