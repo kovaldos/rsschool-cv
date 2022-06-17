@@ -42,11 +42,11 @@ mixin cv-hero ()
 				each item in data.slides
 					.swiper-slide 
 						.cv-hero__slider-item
-							+picture("slides", item.src, "jpg", "100%", "100%", item.alt)
+							+picture("slides", item.src, "jpg", item.alt)
 		.container.cv-hero__container
 			.cv-hero__wrapper
 				.cv-hero__pic
-					+picture("content", data.img.src, "jpg", "100%", "100%", data.img.alt)
+					+picture("content", data.img.src, "jpg", 300, 300, data.img.alt)
 				.cv-hero__heading
 					h1.cv-hero__title.title.title--h1
 						span.cv-hero__title-span.cv-hero__title-span--01=data.person

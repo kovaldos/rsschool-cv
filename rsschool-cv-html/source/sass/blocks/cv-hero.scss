@@ -59,6 +59,10 @@
 	&__title {
 		text-shadow: 5px 5px 10px rgba($color-default-white, .5);
 		color: $color-ivory;
+		white-space: nowrap;
+		@include vp-1023 {
+			white-space: initial;
+		}
 		&-span {
 			&--01 {
 				text-transform: initial;

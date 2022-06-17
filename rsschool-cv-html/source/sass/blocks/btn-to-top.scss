@@ -10,7 +10,7 @@
 		top: auto;
 		left: auto;
 		right: 5vh;
-		bottom: 3vh;
+		bottom: 10vh;
 		transition: all $trans-default;
 		transform: translateX(250%);
 		border-radius: 100%;
@@ -28,6 +28,9 @@
 		}
 		&-icon {
 			color: $color-default-white
+		}
+		@include vp-1023 {
+			display: none;
 		}
 	}
 }

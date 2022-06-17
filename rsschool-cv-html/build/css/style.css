@@ -1649,7 +1649,7 @@ button,
   top: auto;
   left: auto;
   right: 5vh;
-  bottom: 3vh;
+  bottom: 10vh;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2384,6 +2384,7 @@ button,
 .cv-hero__title {
   text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
   color: #fffff0;
+  white-space: nowrap;
 }
 
 .cv-hero__title-span--01 {
@@ -2689,6 +2690,24 @@ button,
 
 .cv-education__link {
   color: #4285f4;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  margin: -10px;
+  padding: 10px;
+}
+
+.cv-education__link:focus {
+  outline: none;
+}
+
+.cv-education__link:hover,
+.cv-education__link:focus-visible {
+  color: #3B5999;
+}
+
+.cv-english__wrapper {
+  min-height: unset;
 }
 
 .footer {
@@ -2721,6 +2740,21 @@ button,
   justify-content: center;
   width: 100px;
   height: 40px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.footer__logo:focus {
+  outline: none;
+}
+
+.footer__logo:hover,
+.footer__logo:focus-visible {
+  background-color: #ffffff;
 }
 
 .footer__copy {
@@ -2774,11 +2808,19 @@ button,
     padding: 0 24px;
   }
 
+  .btn-to-top {
+    display: none;
+  }
+
   .cv-hero__wrapper {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     justify-items: center;
     padding: 50px;
+  }
+
+  .cv-hero__title {
+    white-space: initial;
   }
 }
 
