@@ -1,16 +1,22 @@
 .cv-projects {
 	&__wrapper {
 		gap: 2rem;
+		@include vp-1023 {
+			flex-direction: column;
+		}
 		&-col {
 			background-color: $color-alice-blue;
 			padding: 1rem;
 			border-radius: 10px;
+			@include vp-1023 {
+				flex: auto;
+			}
 			&--01 {
 				margin: 0 auto 0 0;
+				@include vp-1023 {
+					margin: 0;
+				}
 			}
-			// &--02 {
-			// 	// flex: 1;
-			// }
 		}
 	}
 	&__subtitle {
@@ -19,6 +25,7 @@
 	}
 	&__list {
 		margin: 0;
+		padding: 0 0 0 1rem;
 	}
 	&__link {
 		font-size: 1.3rem;
@@ -27,5 +34,8 @@
 		background-color: $color-default-black;
 		color: $color-default-white;
 		padding: 1rem;
+		@include vp-1023 {
+			overflow-x: auto;
+		}
 	}
 }

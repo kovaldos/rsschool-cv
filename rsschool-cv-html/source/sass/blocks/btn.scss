@@ -1,23 +1,25 @@
 .btn {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 10px 0;
   padding: 10px 20px;
-
   color: $color-default-white;
-
   background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
-
   transition: opacity $trans-default;
-
+  &--reset {
+    background-color: $color-transparent;
+    margin: 0;
+    padding: 0;
+  }
   &--red {
     background-color: $color-torch-red;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
