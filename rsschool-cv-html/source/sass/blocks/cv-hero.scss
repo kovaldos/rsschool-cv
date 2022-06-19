@@ -54,12 +54,14 @@
 		}
 	}
 	&__pic {
-		width: 280px;
-		height: 280px;
+		width: 290px;
+		height: 290px;
 		overflow: hidden;
 		border-radius: 100%;
-		outline: 5px solid $color-neon-blue;
-		outline-offset: 5px;
+		position: relative;
+		border: 5px solid $color-neon-blue;
+		padding: 5px;
+		background-color: $color-transparent;
 		@include vp-1023 {
 			width: 220px;
 			height: 220px;
@@ -68,6 +70,7 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: 50%;
+			border-radius: 100%;
 		}
 	}
 	&__title {

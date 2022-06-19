@@ -1436,11 +1436,24 @@ button,
   display: -ms-flexbox;
   display: flex;
   background-color: #ffffff;
-  outline: 2px solid #2c39f2;
   outline-offset: 5px;
   border-radius: 20px;
   padding: 25px;
   margin: 30px 0;
+  position: relative;
+}
+
+.main__wrapper::after {
+  content: "";
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  border-radius: 25px;
+  border: 2px solid #2c39f2;
+  z-index: -1;
 }
 
 .rouble {
@@ -2437,12 +2450,14 @@ button,
 }
 
 .cv-hero__pic {
-  width: 280px;
-  height: 280px;
+  width: 290px;
+  height: 290px;
   overflow: hidden;
   border-radius: 100%;
-  outline: 5px solid #2c39f2;
-  outline-offset: 5px;
+  position: relative;
+  border: 5px solid #2c39f2;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .cv-hero__pic img {
@@ -2451,6 +2466,7 @@ button,
   object-fit: cover;
   -o-object-position: 50%;
   object-position: 50%;
+  border-radius: 100%;
 }
 
 .cv-hero__title {
