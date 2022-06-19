@@ -1,0 +1,17 @@
+.cv-experience {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		&-item {
+			font-size: 1.3rem;
+		}
+	}
+	&__link {
+		font-size: 1.3rem;
+		color: $color-royal-blue;
+		&::after {
+			background-color: $color-royal-blue;
+		}
+	}
+}

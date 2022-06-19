@@ -1,0 +1,111 @@
+.cv-hero {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 80px);
+	margin: 0 0 50px;
+	&__slider {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.3;
+		&-item {
+			width: 100%;
+			height: 100%;
+			animation-name: resize;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			@keyframes resize {
+				0% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+
+				100% {
+					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+				}
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__wrapper {
+		padding: 15% 0;
+		display: grid;
+		grid-template-columns: 280px 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		@include vp-1023 {
+			grid-template-columns: auto;
+			padding: 25px 0;
+			& > * {
+				align-self: center;
+				justify-self: center;
+			}
+		}
+	}
+	&__pic {
+		width: 290px;
+		height: 290px;
+		overflow: hidden;
+		border-radius: 100%;
+		position: relative;
+		border: 5px solid $color-neon-blue;
+		padding: 5px;
+		background-color: $color-transparent;
+		@include vp-1023 {
+			width: 220px;
+			height: 220px;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: 50%;
+			border-radius: 100%;
+		}
+	}
+	&__title {
+		text-shadow: 5px 5px 10px rgba($color-default-white, .5);
+		color: $color-ivory;
+		white-space: nowrap;
+		@include vp-1023 {
+			white-space: initial;
+		}
+		@include vp-767 {
+			font-size: 1.8rem;
+		}
+		@include vp-639 {
+			font-size: 1.5rem;
+		}
+		&-span {
+			&--01 {
+				text-transform: initial;
+			}
+			&--02 {
+				text-transform: initial;
+				display: block;
+				text-indent: 50px;
+			}
+			&--03 {
+				text-transform: initial;
+				display: block;
+				text-indent: 50px;
+			}
+		}
+		strong {
+			white-space: nowrap;
+			@include vp-424 {
+				padding-left: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+.cv-contacts {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+		& > * {
+			align-self: center;
+			justify-self: center;
+		}
+		@include vp-767 {
+			grid-template-columns: repeat(3,1fr);
+		}
+		@include vp-639 {
+			grid-template-columns: repeat(2,1fr);
+			grid-column-gap: 1rem;
+			grid-row-gap: 1.5rem;
+		}
+	}
+	&__link {
+		width: 100px;
+		height: 100px;
+		&:hover,
+		&:focus-visible {
+			&::after {
+				display: none;
+			}
+			.cv-contacts {
+				&__icon {
+					&--gmail {
+						.st--0 {
+							fill: $color-royal-blue;
+						}
+						.st--1 {
+							color: $color-chateau-green;
+						}
+						.st--2 {
+							color: $color-selective-yellow;
+						}
+						.st--3 {
+							color: $color-cinnabar;
+						}
+						.st--4 {
+							color: $color-fire-brick;
+						}
+					}
+					&--phone {
+						color: $color-neon-blue;
+					}
+					&--linkedin {
+						color: $color-cerulean;
+					}
+					&--discord {
+						color: $color-neon-blue;
+					}
+					&--tg {
+						color: $color-pacific-blue;
+					}
+					&--fb {
+						color: $color-mariner;
+					}
+					&--vk {
+						color: $color-san-marino;
+					}
+				}
+			}
+		}
+		@include vp-639 {
+			width: 50px;
+			height: 50px;
+		}
+		&--insta {
+			border-radius: 25px;
+			background-color: $color-dim-gray;
+
+			z-index: 0;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 25px;
+				opacity: 0;
+				transition: opacity $trans-default;
+				z-index: -1;
+				background: $mustard-to-fuchsia;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			&:hover,
+			&:focus-visible {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__icon {
+		width: 100%;
+		height: 100%;
+		color: $color-dim-gray;
+		transition: color $trans-default;
+		.st {
+			transition: color $trans-default;
+		}
+		&--insta {
+			color: $color-default-white;
+		}
+	}
+}

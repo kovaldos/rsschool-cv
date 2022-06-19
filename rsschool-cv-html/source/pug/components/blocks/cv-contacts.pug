@@ -1,0 +1,80 @@
+mixin cv-contacts ()
+	-
+		const data = {
+			title: "Contact me",
+			gmail: {
+				href: "mailto:orblack2@gmail.com",
+				icon: '<path class="st st--0" d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z" fill="currentColor"/><path class="st st--1" d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z" fill="currentColor"/><path class="st st--2" d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z" fill="currentColor"/><path class="st st--3" d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z" fill="currentColor"/><path class="st st--4" d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z" fill="currentColor"/>',
+				linkClass: "cv-contacts__link--gmail",
+				iconClass: "cv-contacts__icon--gmail",
+			},
+			items: [
+				{
+					href: "tel:+79046121580",
+					icon: "icon-iphone",
+					linkClass: "cv-contacts__link--phone",
+					iconClass: "cv-contacts__icon--phone",
+				},
+				{
+					href: "https://www.linkedin.com/in/%D1%8F%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D0%BA%D0%BE%D0%B2%D0%B0%D0%BB%D0%B5%D0%B2-101b42165",
+					icon: "icon-linkedin",
+					linkClass: "cv-contacts__link--linkedin",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--linkedin",
+				},
+				{
+					href: "https://discord.com/users/kovaldos#1827",
+					icon: "icon-discord",
+					linkClass: "cv-contacts__link--discord",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--discord",
+				},
+				{
+					href: "tg://resolve?domain=kovaldos/",
+					icon: "icon-tg",
+					linkClass: "cv-contacts__link--tg",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--tg",
+				},
+				{
+					href: "https://www.instagram.com/orblack2/",
+					icon: "icon-insta",
+					linkClass: "cv-contacts__link--insta",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--insta",
+				},
+				{
+					href: "https://www.facebook.com/orblack2",
+					icon: "icon-fb",
+					linkClass: "cv-contacts__link--fb",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--fb",
+				},
+				{
+					href: "https://vk.com/id11996187",
+					icon: "icon-vk",
+					linkClass: "cv-contacts__link--vk",
+					target: "_blank",
+					rel: "noopener noreferrer nofollow",
+					iconClass: "cv-contacts__icon--vk",
+				},
+			],
+		}
+
+	section.cv-contacts#contacts 
+		.container.cv-contacts__container 
+			h2.cv-contacts__title.title.title--h2=data.title
+			.cv-contacts__wrapper.main__wrapper
+				ul.cv-contacts__list
+					li.cv-contacts__list-item
+						a.cv-contacts__link.link(href=data.gmail.href class=data.gmail.linkClass)
+							svg.cv-contacts__icon(width="100" height="100"	xmlns="http://www.w3.org/2000/svg" viewBox="0 49.4 512 399.4200000000001" class=data.gmail.iconClass)!=data.gmail.icon
+					each item in data.items
+						li.cv-contacts__list-item
+							a.cv-contacts__link.link(href=item.href target!=item.target rel!=item.rel class=item.linkClass)
+								+icon(item.icon, 100, 100).cv-contacts__icon(class=item.iconClass)
