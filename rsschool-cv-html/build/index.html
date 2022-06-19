@@ -66,12 +66,14 @@
       <header class="header">
         <div class="container header__container"><span class="header__logo"><img src="./img/svg/logo.svg" alt="RS School logo"></span>
           <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
+            <button class="main-nav__toggle btn btn--reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-icon>
+              <svg class="main-nav__toggle-icon" width="100" height="100" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+                <path class="line line2" d="M 20,50 H 80"></path>
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
               </svg>
             </button>
-            <div class="main-nav__wrapper">
+            <div class="main-nav__wrapper" data-burger-body>
               <ul class="main-nav__list">
                 <li class="main-nav__item"><a class="main-nav__link link" href="#contacts" data-target="contacts">Contacts</a>
                 </li>
@@ -244,7 +246,7 @@
         </section>
         <section class="cv-projects" id="projects"> 
           <div class="container cv-projects__container"> 
-            <h2 class="cv-projects__title title title--h2">projects</h2>
+            <h2 class="cv-projects__title title title--h2">Projects</h2>
             <div class="cv-projects__wrapper main__wrapper">
               <div class="cv-projects__wrapper-col cv-projects__wrapper-col--01">
                 <h3 class="cv-projects__subtitle title title--h3">some of my work projects</h3>
@@ -277,7 +279,7 @@ export {initScrollToAnchor};</pre>
         </section>
         <section class="cv-experience" id="experience"> 
           <div class="container cv-experience__container"> 
-            <h2 class="cv-experience__title title title--h2">experience</h2>
+            <h2 class="cv-experience__title title title--h2">Experience</h2>
             <div class="cv-experience__wrapper main__wrapper"> 
               <ul class="cv-experience__list">
                 <li class="cv-experience__list-item"><span>May 2021 to Present. RA-Studio, </span><a class="cv-experience__link link" href="https://ra-studio.ru/ " target="_blank" rel="noopener noreferrer">ra-studio.ru </a><span>Frontend developer</span></li>
@@ -290,7 +292,7 @@ export {initScrollToAnchor};</pre>
         </section>
         <section class="cv-education" id="education"> 
           <div class="container cv-education__container"> 
-            <h2 class="cv-education__title title title--h2">education</h2>
+            <h2 class="cv-education__title title title--h2">Education</h2>
             <div class="cv-education__wrapper main__wrapper"> 
               <p class="cv-education__text text text--md">2005, Russian University of Innovations, state and municipal management</p>
               <h3 class="cv-education__subtitle title title--h3">self-education</h3>
@@ -300,7 +302,7 @@ export {initScrollToAnchor};</pre>
         </section>
         <section class="cv-english" id="english"> 
           <div class="container cv-english__container"> 
-            <h2 class="cv-english__title title title--h2">english</h2>
+            <h2 class="cv-english__title title title--h2">English</h2>
             <div class="cv-english__wrapper main__wrapper"> 
               <p class="cv-english__text text text--md">A2 Elementary</p>
             </div>

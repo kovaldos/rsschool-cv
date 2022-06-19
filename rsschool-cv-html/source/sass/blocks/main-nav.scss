@@ -1,4 +1,30 @@
 .main-nav {
+  &__wrapper {
+    @include vp-1023 {
+      background-color: $color-neon-blue;
+      position: fixed;
+      top: 110px;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      width: 50vw;
+      height: calc(99vh - 110px);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      z-index: 10;
+      transform: translateX(250%);
+      transition: transform 0.3s ease;
+    }
+    @include vp-639 {
+      width: 100vw;
+      border-radius: 0;
+      height: calc(100vh - 100px);
+      top: 99px;
+    }
+    &.is-active {
+      transform: translateX(0);
+    }
+  }
   &__list {
     flex: auto;
     height: 100%;
@@ -7,10 +33,18 @@
     margin: 0 20px;
     padding: 0;
     list-style: none;
+    @include vp-1023 {
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 25px 0;
+    }
   }
 
   &__item {
     margin-right: 20px;
+    @include vp-1023 {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__link {
@@ -28,6 +62,50 @@
   }
 
   &__toggle {
+    width: 55px;
+    height: 55px;
     display: none;
+    @include vp-1023 {
+      display: block;
+      order: 1;
+      &-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
+}
+// animated svg burger icon
+.line {
+  fill: none;
+  stroke: $color-default-white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.is-active .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.is-active .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.is-active .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
 }
