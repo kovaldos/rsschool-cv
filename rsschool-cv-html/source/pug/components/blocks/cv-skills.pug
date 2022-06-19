@@ -1,0 +1,88 @@
+mixin cv-skills ()
+	-
+		const data = {
+			title: "Skills",
+			items: [
+				{
+					href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+					text: "JavaScript",
+					icon: "icon-js",
+					linkClass: "cv-skills__link--js",
+					iconClass: "cv-skills__icon--js",
+				},
+				{
+					href: "https://jquery.com/",
+					text: "jQuery",
+					icon: "icon-jq",
+					linkClass: "cv-skills__link--jq",
+					iconClass: "cv-skills__icon--jq",
+				},
+				{
+					href: "https://ru.reactjs.org/",
+					text: "React.js(basic)",
+					icon: "icon-react",
+					linkClass: "cv-skills__link--react",
+					iconClass: "cv-skills__icon--react",
+				},
+				{
+					href: "https://vuejs.org/",
+					text: "Vue.js(basic)",
+					icon: "icon-vue",
+					linkClass: "cv-skills__link--vue",
+					iconClass: "cv-skills__icon--vue",
+				},
+				{
+					href: "https://pugjs.org/api/getting-started.html",
+					text: "pug",
+					icon: "icon-pug",
+					linkClass: "cv-skills__link--pug",
+					iconClass: "cv-skills__icon--pug",
+				},
+				{
+					href: "https://sass-lang.com/",
+					text: "sass",
+					icon: "icon-sass",
+					linkClass: "cv-skills__link--sass",
+					iconClass: "cv-skills__icon--sass",
+				},
+				{
+					href: "https://getbootstrap.com/",
+					text: "bootstrap",
+					icon: "icon-bootstrap",
+					linkClass: "cv-skills__link--bootstrap",
+					iconClass: "cv-skills__icon--bootstrap",
+				},
+				{
+					href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+					text: "html5",
+					icon: "icon-html",
+					linkClass: "cv-skills__link--html",
+					iconClass: "cv-skills__icon--html",
+				},
+				{
+					href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+					text: "css3",
+					icon: "icon-css",
+					linkClass: "cv-skills__link--css",
+					iconClass: "cv-skills__icon--css",
+				},
+				{
+					href: "https://www.figma.com/",
+					text: "figma",
+					icon: "icon-figma",
+					linkClass: "cv-skills__link--figma",
+					iconClass: "cv-skills__icon--figma",
+				},
+			],
+		}
+
+	section.cv-skills#skills 
+		.container.cv-skills__container 
+			h2.cv-skills__title.title.title--h2=data.title
+			.cv-skills__wrapper.main__wrapper
+				ul.cv-skills__list
+					each item in data.items
+						li.cv-skills__list-item
+							a.cv-skills__link.link(href=item.href, target="_blank" rel="noopener noreferrer" class=item.linkClass)
+								+icon(item.icon, 40, 40).cv-skills__icon(class=item.iconClass)
+								span=item.text

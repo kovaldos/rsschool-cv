@@ -1,0 +1,55 @@
+mixin cv-projects ()
+	-
+		const data = {
+			title: "Projects",
+			subtitle1: "some of my work projects",
+			items: [
+				{
+					href: "http://pet.limkorm.ru/",
+					text: "pet food manufacturer website"
+				},
+				{
+					href: "https://quantad.ru/",
+					text: "advertising agency website"
+				},
+				{
+					href: "https://parusa-group.ru/",
+					text: "advertising agency website"
+				},
+			],
+			subtitle2: "example of my code",
+		}
+	-
+		const pre = "import {scrollTo} from '../utils/scroll-to';\n"+
+						"const initScrollToAnchor = () => {\n"+
+						"  const anchorLinks = document.querySelectorAll('[data-target]');\n"+
+						"  if (anchorLinks.length) {\n"+
+						"    anchorLinks.forEach((link) => {\n"+
+						"      link.addEventListener('click', (e) => {\n"+
+						"        const currentBlock = link.getAttribute('data-target');\n"+
+						"        const blockTop = document.getElementById(currentBlock).offsetTop;\n"+
+						"        e.preventDefault();\n"+
+						"        scrollTo(blockTop, 400);\n"+
+						"      });\n"+
+						"    });\n"+
+						"  }\n"+
+						"};\n"+
+						"export {initScrollToAnchor};"
+			
+
+	section.cv-projects#projects 
+		.container.cv-projects__container 
+			h2.cv-projects__title.title.title--h2=data.title
+			.cv-projects__wrapper.main__wrapper
+				.cv-projects__wrapper-col.cv-projects__wrapper-col--01
+					h3.cv-projects__subtitle.title.title--h3=data.subtitle1
+					ul.cv-projects__list 
+						each item in data.items 
+							li.cv-projects__list-item 
+								a.cv-projects__link.link(href=item.href, target="_blank", rel="noopener noreferrer")=item.text
+				.cv-projects__wrapper-col.cv-projects__wrapper-col--02 
+					h3.cv-projects__subtitle.title.title--h3=data.subtitle2
+					pre.cv-projects__pre=pre
+
+
+
